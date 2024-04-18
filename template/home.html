@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <title>Largest of 3 Numbers</title>
+</head>
+<body>
+    <nav class="navbar bg-primary sticky-top">
+        <div class="container-fluid">
+          <a class="navbar-brand" href="/">
+            <img src="/static/logo.jpg" alt="Logo" width="30" height="24" class="d-inline-block align-text-top">
+            3num app by 22f2001675 (vijay)
+          </a>
+        </div>
+      </nav>
+    <main>
+        <h1 class="visually-hidden">Find Largest of 3 numbers.</h1>
+      
+        <div class="b-example-divider"></div>
+      
+        <div class="container col-xl-10 col-xxl-8 px-4 py-5">
+          <div class="row align-items-center g-lg-5 py-5">
+            <div class="col-lg-7 text-center text-lg-start">
+              <h1 class="display-4 fw-bold lh-1 text-body-emphasis mb-3">Find the largest of 3 Numbers.</h1>
+              <p class="col-lg-10 fs-4">Harnessing the power of sophisticated artificial intelligence, we’ve developed an algorithm that stands unrivaled across the globe. Its sole purpose? To determine the largest among three input numbers you provide.</p>
+            </div>
+            <div class="col-md-10 mx-auto col-lg-5">
+              <form class="p-4 p-md-5 border rounded-3 bg-body-tertiary" action="/" method="POST">
+                <div class="form-floating mb-3">
+                  <input type="number" class="form-control" id="floatingInput" placeholder="EX. 124" name="1num" required>
+                  <label for="floatingInput">Enter first number.</label>
+                </div>
+                <div class="form-floating mb-3">
+                    <input type="number" class="form-control" id="floatingInput" placeholder="EX. 1233" name="2num" required>
+                    <label for="floatingInput">Enter second number.</label>
+                </div>
+                <div class="form-floating mb-3">
+                    <input type="number" class="form-control" id="floatingInput" placeholder="EX. 76" name="3num" required>
+                    <label for="floatingInput">Enter third number.</label>
+                </div>
+                
+                <div class="checkbox mb-3">
+                  <label>
+                    <input type="checkbox" value="use-all-cores"> Use all CPU Cores.
+                  </label>
+                </div>
+                <button class="w-100 btn btn-lg btn-primary" type="submit">Find</button>
+                <hr class="my-4">
+                {% if answer != "none" %}
+                <div class="alert alert-success" role="alert">
+                <small class="text-body-secondary">Largest of <b>{{num1}}</b>, <b>{{num2}}</b>, <b>{{num3}}</b> is : <h1>{{answer}}</h1></small>
+                </div>
+                {% endif %}
+              </form>
+            </div>
+          </div>
+        </div>
+      
+        <div class="b-example-divider"></div>
+      
+        <div class="bg-dark text-secondary px-4 py-5 text-center">
+          <div class="py-5">
+            <h1 class="display-5 fw-bold text-white">Find the largest of 3 Numbers.</h1>
+            <div class="col-lg-6 mx-auto">
+              <p class="fs-5 mb-4">@copyright vijay 22f2001675 y-2024.</p>
+            </div>
+          </div>
+        </div>
+      
+        <div class="b-example-divider mb-0"></div>
+      </main>
+</body>
+</html>
